@@ -1,101 +1,144 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      {/* Header Section */}
+      <div className="min-h-1/2 bg-gray-200">
+        <main className="container mx-auto px-4 flex flex-col md:flex-row md:items-center py-10">
+          {/* Left Section */}
+          <div className="bg-gray-200 md:w-1/2 space-y-4 text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-blue-900">Governor Sindh</h1>
+            <h2 className="text-2xl md:text-4xl text-blue-900 mt-4">Kamran Khan Tessori</h2>
+            <h2 className="text-xl md:text-3xl font-extrabold text-sky-400 p-4">
+              Certified Cloud <br /> Applied Generative AI <br /> Engineer (GenEng)
+            </h2>
+            <h2 className="text-sky-700 text-base md:text-xl font-extrabold">Earn up to $5,000/month</h2>
+            <p className="text-sky-700 text-sm md:text-xl font-extrabold">Now admissions are open in Hyderabad</p>
+            <div className="flex flex-col md:flex-row items-center md:justify-between w-full">
+              <button className="bg-blue-900 text-white py-3 px-10 md:px-20 rounded-lg font-semibold hover:bg-blue-800 mt-4 md:mt-0">
+                APPLY NOW
+              </button>
+              <p className="text-blue-900 mt-2 md:mt-0 text-center md:text-right">
+                <span className="text-2xl md:text-3xl font-extrabold">562,143</span>
+                <br />
+                <span className="font-light text-sm md:text-base">Accepted Applications</span>
+              </p>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          {/* Right Section */}
+          <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/pictures/side.png"
+              alt="pic"
+              width={1200}
+              height={700}
+              className="w-full max-w-[600px] h-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+        </main>
+      </div>
+
+      {/* Intro Section */}
+      <div className="mt-16 flex flex-col items-center px-4">
+        <h1 className="font-extrabold text-blue-950 text-center text-2xl md:text-3xl max-w-4xl">
+          Certified Cloud Applied Generative AI Engineer (GenEng) and Solopreneur Developing Billion-Dollar Valued Developers and Solopreneurs
+        </h1>
+        <p className="text-base md:text-xl mt-6 text-center max-w-4xl leading-relaxed">
+        The pace of technological change is accelerating, big players like Microsoft, Amazon, Google, and OpenAI are winning by providing  infrastructure, large AI foundation models, frameworks, 3D Metaverse experiences, and massive distribution networks. Solopreneurs trained in this program will win by automating work typically outsourced to employees, by directly connecting to customers by eliminating the middleman, and by developing vertical metaverses, thus paving the way for the first billion-dollar valued solopreneur businesses. This program has the objective to train this new breed of billion-dollar solopreneurs. These solopreneurs will adopt the ultra-lean business model and work independently and will not need to hire employees or other team members.
+        </p>
+      </div>
+
+      {/* Core Courses */}
+      <div className="text-center mt-16 px-4">
+        <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl max-w-4xl text-left ml-2">
+          Core Courses Sequence
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+          {[
+            {
+              src: "https://www.governorsindh.com/_next/static/media/programming_fundamentals.49cca4e9.jpg",
+              title: "Programming Fundamentals",
+            },
+            {
+              src: "https://www.governorsindh.com/_next/static/media/nextjs.3dff0f70.jpg",
+              title: "Web 2.0 using NextJS",
+            },
+            {
+              src: "https://www.governorsindh.com/_next/static/media/earn_as_your_learn.b8248a49.jpg",
+              title: "Earn as You Learn",
+            },
+          ].map((course, index) => (
+            <div
+              key={index}
+              className="rounded-lg shadow-lg overflow-hidden bg-white"
+            >
+              <Image
+                src={course.src}
+                alt={course.title}
+                width={300}
+                height={300}
+                className="w-full aspect-square object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-sm md:text-xl font-bold text-gray-800">{course.title}</h2>
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Advanced Courses */}
+      <div className="text-center mt-16 px-4">
+        <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl text-left ml-3">
+          Advanced Courses
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 mb-6">
+          {[
+            {
+              src: "https://www.governorsindh.com/_next/static/media/AI.39397d24.jpg",
+              title: "Artificial Intelligence",
+            },
+            {
+              src: "https://www.governorsindh.com/_next/static/media/metaverse.06eccb60.jpg",
+              title: "Web 3 and Metaverse",
+            },
+            {
+              src: "https://www.governorsindh.com/_next/static/media/cloudComputing.7260492c.jpg",
+              title: "Cloud-Native Computing",
+            },
+            {
+              src: "https://www.governorsindh.com/_next/static/media/iot.16f7b003.jpg",
+              title: "Ambient Computing and IoT",
+            },
+            {
+              src: "https://www.governorsindh.com/_next/static/media/genomics.b87789f1.jpg",
+              title: "Genomics and Bioinformatics",
+            },
+            {
+              src: "https://www.governorsindh.com/_next/static/media/automation.a77dbbe8.jpg",
+              title: "Network Programmability and Automation",
+            },
+          ].map((course, index) => (
+            <div
+              key={index}
+              className="rounded-lg shadow-lg overflow-hidden bg-white"
+            >
+              <Image
+                src={course.src}
+                alt={course.title}
+                width={300}
+                height={300}
+                className="w-full aspect-square object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-sm md:text-xl font-bold text-gray-800">{course.title}</h2>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
