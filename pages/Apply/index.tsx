@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { FaFacebook, FaYoutube, FaTwitter, FaInstagram, FaCheck } from "react-icons/fa";
-import Form from "./form";
 import Link from "next/link";
 
 export default function Apply() {

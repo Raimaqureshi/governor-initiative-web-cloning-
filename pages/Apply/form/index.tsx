@@ -16,11 +16,11 @@ export default function Form() {
         </div>
 
         <div>
-          <label className="block text-gray-700 font-medium">Father's Full Name *</label>
+          <label className="block text-gray-700 font-medium">Father&apos;s Full Name *</label>
           <input
             type="text"
             className="w-full mt-1 p-2 border-2 border-gray-300 focus:outline-none focus:border-blue-500 bg-gray-100 rounded"
-            placeholder="Father's Full Name"
+            placeholder="Father&apos;s Full Name"
           />
         </div>
 
