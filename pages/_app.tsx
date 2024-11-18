@@ -1,6 +1,11 @@
-import "../styles/globals.css"; // Adjust the path based on your file structure
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }: { Component: React.ElementType; pageProps: any }) {
+type AppProps = {
+  Component: React.ElementType;
+  pageProps: Record<string, unknown>; // Specify a more specific type here
+};
+
+function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
