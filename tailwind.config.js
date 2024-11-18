@@ -17,6 +17,10 @@ exports.default = {
                     '1200': '1200px', // Add a custom width
                   },
             },
+            fontFamily: {
+                geistSans: ['"GeistSans"', 'sans-serif'],
+                geistMono: ['"GeistMono"', 'monospace'],
+              },
         },
     },
     plugins: [],
