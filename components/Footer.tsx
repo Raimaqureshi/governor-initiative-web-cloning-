@@ -2,7 +2,7 @@ import { FaFacebookF, FaYoutube, FaTwitter, FaInstagram, FaTiktok } from "react-
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-200 py-8 px-4">
+    <footer className="bg-gray-200 py-8 px-4 text-gray-900">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-left md:text-left">
         
         <div>

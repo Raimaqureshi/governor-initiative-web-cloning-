@@ -3,18 +3,18 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <div>
-      {/* Header Section */}
+      
       <div className="min-h-1/2 bg-gray-200">
         <main className="container mx-auto px-4 flex flex-col md:flex-row md:items-center py-10">
-          {/* Left Section */}
-          <div className="bg-gray-200 md:w-1/2 space-y-4 text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-blue-900">Governor Sindh</h1>
-            <h2 className="text-2xl md:text-4xl text-blue-900 mt-4">Kamran Khan Tessori</h2>
-            <h2 className="text-xl md:text-3xl font-extrabold text-sky-400 p-4">
+    
+          <div className="bg-gray-200 md:w-1/2 space-y-4 text-center mt-24 md:text-left">
+            <h1 className="text-5xl md:text-5xl font-extrabold text-blue-900">Governor Sindh</h1>
+            <h2 className="text-2xl md:text-5xl sm:text-4xl text-blue-900 mt-4">Kamran Khan Tessori</h2>
+            <h2 className="text-xl md:text-4xl sm:text-4xl font-extrabold text-sky-400 p-4">
               Certified Cloud <br /> Applied Generative AI <br /> Engineer (GenEng)
             </h2>
-            <h2 className="text-sky-700 text-base md:text-xl font-extrabold">Earn up to $5,000/month</h2>
-            <p className="text-sky-700 text-sm md:text-xl font-extrabold">Now admissions are open in Hyderabad</p>
+            <h2 className="text-sky-700 text-base md:text-2xl sm:text-2xl font-extrabold">Earn up to $5,000/month</h2>
+            <p className="text-sky-700 text-sm md:text-2xl sm:text-2xl font-extrabold">Now admissions are open in Hyderabad</p>
             <div className="flex flex-col md:flex-row items-center md:justify-between w-full">
               <button className="bg-blue-900 text-white py-3 px-10 md:px-20 rounded-lg font-semibold hover:bg-blue-800 mt-4 md:mt-0">
                 APPLY NOW
@@ -27,7 +27,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Section */}
           <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
             <Image
               src="/pictures/side.png"
@@ -40,8 +39,7 @@ export default function HomePage() {
         </main>
       </div>
 
-      {/* Intro Section */}
-      <div className="mt-16 flex flex-col items-center px-4">
+      <div className="mt-16 flex flex-col items-center px-4 bg-white">
         <h1 className="font-extrabold text-blue-950 text-center text-2xl md:text-3xl max-w-4xl">
           Certified Cloud Applied Generative AI Engineer (GenEng) and Solopreneur Developing Billion-Dollar Valued Developers and Solopreneurs
         </h1>
@@ -49,9 +47,8 @@ export default function HomePage() {
         The pace of technological change is accelerating, big players like Microsoft, Amazon, Google, and OpenAI are winning by providing  infrastructure, large AI foundation models, frameworks, 3D Metaverse experiences, and massive distribution networks. Solopreneurs trained in this program will win by automating work typically outsourced to employees, by directly connecting to customers by eliminating the middleman, and by developing vertical metaverses, thus paving the way for the first billion-dollar valued solopreneur businesses. This program has the objective to train this new breed of billion-dollar solopreneurs. These solopreneurs will adopt the ultra-lean business model and work independently and will not need to hire employees or other team members.
         </p>
       </div>
-
-      {/* Core Courses */}
-      <div className="text-center mt-16 px-4">
+<hr className='mt-8 border-gray-300' />
+      <div className="text-center mt-16 px-4 bg-white">
         <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl max-w-4xl text-left ml-2">
           Core Courses Sequence
         </h1>
@@ -89,8 +86,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Advanced Courses */}
-      <div className="text-center mt-16 px-4">
+      <div className="text-center mt-16 px-4 bg-white">
         <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl text-left ml-3">
           Advanced Courses
         </h1>

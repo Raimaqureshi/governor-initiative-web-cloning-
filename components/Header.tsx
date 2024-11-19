@@ -5,15 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="relative">
-      
-      <header className="bg-custom-blue p-6 text-white relative z-10">
-        <div className="flex justify-between items-center px-2 shadow-xl">
-         
+
+      <header className="bg-custom-blue text-white p-4 fixed top-0 left-0 w-full z-20">
+        <div className="flex justify-between items-center">
+
           <div className="absolute top-1/2 left-0 transform p-6 -translate-y-1/4 z-10">
             <Link href="/">
               <Image
@@ -26,88 +25,65 @@ export default function Header() {
             </Link>
           </div>
 
-          <p className="text-center text-blue-200 font-bold mx-auto text-sm sm:text-base lg:text-lg">
-            <span className="md:hidden">Tuition Free Program</span>
-            <span className="hidden md:inline">
-              Tuition Free Education Program on Latest Technologies
-            </span>
-          </p>
+          <div className="flex-1 text-center">
+            <p className="text-center text-blue-200 font-bold mx-auto text-sm sm:text-lg lg:text-lg max-w-xs sm:max-w-md lg:max-w-lg">
+              <span className="md:hidden">Tuition Free Program</span>
+              <span className="hidden md:inline-block">
+                Tuition Free Education Program on Latest Technologies
+              </span>
+            </p>
+          </div>
 
-          <ul className="hidden sm:flex items-center gap-6 sm:gap-4 md:gap-7 lg:gap-5 xl:gap-8 text-sm sm:text-base md:text-lg lg:text-base ml-2">
-            <li>
-              <Link className="hover:text-gray-500" href="/">
+
+          <div className="flex-shrink-0">
+
+            <nav className="hidden md:flex space-x-6">
+              <Link href="/" className="hover:text-gray-300">
                 Home
               </Link>
-            </li>
-            <li>
-              <Link className="hover:text-gray-200" href="/Apply">
+              <Link href="/apply" className="hover:text-gray-300">
                 Apply
               </Link>
-            </li>
-            <li>
-              <Link className="hover:text-gray-500" href="/Jobs">
+              <Link href="/jobs" className="hover:text-gray-300">
                 Jobs
               </Link>
-            </li>
-            <li>
-              <Link className="hover:text-gray-500" href="/Results">
+              <Link href="/results" className="hover:text-gray-300">
                 Results
               </Link>
-            </li>
-            <li className="relative">
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="hover:text-gray-200"
-              >
+              <Link href="/courses" className="hover:text-gray-300">
                 Courses
-              </button>
+              </Link>
+            </nav>
 
-              {isDropdownOpen && (
-                <div className="absolute bg-white text-black text-xs shadow-md rounded mt-2 w-64 z-20 right-0">
-                  <ul className="p-2 space-y-2">
-                    <li className="font-extrabold text-lg px-2 py-1">
-                      Core Courses
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Programming Fundamentals
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Web2 Using NextJS
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Earn as You Learn
-                    </li>
-                    <hr />
-                    <li className="font-extrabold text-lg px-2 py-1">
-                      Advanced Courses
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Web 3 and Metaverse
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Cloud-Native Computing
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Artificial Intelligence (AI) and Deep Learning
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Ambient Computing and IoT
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Genomics and Bioinformatics
-                    </li>
-                    <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                      Network Programmability and Automation
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </li>
-          </ul>
+            <button
+              className="md:hidden p-2 text-white hover:text-gray-300 focus:outline-none"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-custom-blue text-white flex flex-col z-20 md:hidden">
 
           <button
-            className="block sm:hidden p-2 text-white hover:text-gray-200 focus:outline-none"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="absolute top-4 right-6 p-2 text-white hover:text-gray-300 focus:outline-none"
+            onClick={() => setIsMenuOpen(false)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,52 +96,60 @@ export default function Header() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M4 6h16M4 12h16m-7 6h7"
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
-        </div>
 
-        {isMobileMenuOpen && (
-          <div className="sm:hidden bg-white text-black shadow-md rounded mt-2 p-4 space-y-4">
-            <Link className="block hover:text-gray-500" href="/">
-              Home
-            </Link>
-            <Link className="block hover:text-gray-500" href="/Apply">
-              Apply
-            </Link>
-            <Link className="block hover:text-gray-500" href="/Jobs">
-              Jobs
-            </Link>
-            <Link className="block hover:text-gray-500" href="/Results">
-              Results
-            </Link>
-            <div>
-              <p className="font-bold text-lg">Courses</p>
-              <ul className="space-y-2 mt-2">
-                <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                  Programming Fundamentals
-                </li>
-                <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                  Web2 Using NextJS
-                </li>
-                <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                  Earn as You Learn
-                </li>
-                <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                  Web 3 and Metaverse
-                </li>
-                <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                  Cloud-Native Computing
-                </li>
-                <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
-                  Artificial Intelligence
-                </li>
-              </ul>
-            </div>
-          </div>
-        )}
-      </header>
+          <ul className="space-y-6 text-center text-lg font-bold mt-16">
+            <li>
+              <Link
+                href="/"
+                className="hover:text-gray-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/apply"
+                className="hover:text-gray-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Apply
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/jobs"
+                className="hover:text-gray-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Jobs
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/results"
+                className="hover:text-gray-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Results
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/courses"
+                className="hover:text-gray-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Courses
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
