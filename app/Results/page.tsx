@@ -1,6 +1,6 @@
 export default function Results() {
   return (
-    <div className="bg-white h-screen flex flex-col px-4 sm:px-6 md:px-8">
+    <div className="bg-white h-screen mt-12 flex flex-col px-4 sm:px-6 md:px-8">
       <h1 className="text-blue-900 mt-12 font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
         Grand Entrance Exam Result
       </h1>
