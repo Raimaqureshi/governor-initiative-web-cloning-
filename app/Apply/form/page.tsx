@@ -1,7 +1,7 @@
 export default function Form() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <h1 className="text-blue-900 text-2xl font-extrabold mb-4 text-center mt-8">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4 mt-16">
+      <h1 className="text-blue-900 text-3xl font-extrabold mb-4 text-center mt-8 sm:text-2xl lg:text-4xl">
         Student Course Registration Form
       </h1>
       <p className="mt-3 text-sm">Already applied? <span className="cursor-pointer text-sky-600 underline">Get Admit Card</span></p>

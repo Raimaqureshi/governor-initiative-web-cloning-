@@ -33,26 +33,26 @@ export default function HomePage() {
               alt="pic"
               width={1200}
               height={700}
-              className="w-full max-w-[600px] h-auto"
+              className="w-full max-w-[1600px] h-auto"
             />
           </div>
         </main>
       </div>
 
-      <div className="mt-16 flex flex-col items-center px-4 bg-white">
-        <h1 className="font-extrabold text-blue-950 text-center text-2xl md:text-3xl max-w-4xl">
+      <div className="mt-16 flex flex-col items-center px-4 bg-white bg-white sm:bg-white md:bg-white">
+        <h1 className="font-extrabold text-blue-950 text-center text-2xl md:text-3xl max-w-4xl bg-white sm:bg-white md:bg-white">
           Certified Cloud Applied Generative AI Engineer (GenEng) and Solopreneur Developing Billion-Dollar Valued Developers and Solopreneurs
         </h1>
-        <p className="text-base md:text-xl mt-6 text-center max-w-4xl leading-relaxed">
+        <p className="text-base md:text-xl mt-6 text-center max-w-4xl leading-relaxed bg-white sm:bg-white md:bg-white">
         The pace of technological change is accelerating, big players like Microsoft, Amazon, Google, and OpenAI are winning by providing  infrastructure, large AI foundation models, frameworks, 3D Metaverse experiences, and massive distribution networks. Solopreneurs trained in this program will win by automating work typically outsourced to employees, by directly connecting to customers by eliminating the middleman, and by developing vertical metaverses, thus paving the way for the first billion-dollar valued solopreneur businesses. This program has the objective to train this new breed of billion-dollar solopreneurs. These solopreneurs will adopt the ultra-lean business model and work independently and will not need to hire employees or other team members.
         </p>
       </div>
 <hr className='mt-8 border-gray-300' />
-      <div className="text-center mt-16 px-4 bg-white">
-        <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl max-w-4xl text-left ml-2">
+      <div className="text-center mt-16 px-4 bg-white bg-white sm:bg-white md:bg-white">
+        <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl sm:text-4xl max-w-4xl text-left ml-2 bg-white sm:bg-white md:bg-white">
           Core Courses Sequence
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 bg-white sm:bg-white md:bg-white">
           {[
             {
               src: "https://www.governorsindh.com/_next/static/media/programming_fundamentals.49cca4e9.jpg",
@@ -86,11 +86,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="text-center mt-16 px-4 bg-white">
-        <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl text-left ml-3">
+      <div className="text-center mt-16 px-4 bg-white bg-white sm:bg-white md:bg-white">
+        <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl sm:text-4xl text-left ml-3 bg-white sm:bg-white md:bg-white">
           Advanced Courses
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 mb-6 bg-white sm:bg-white md:bg-white">
           {[
             {
               src: "https://www.governorsindh.com/_next/static/media/AI.39397d24.jpg",

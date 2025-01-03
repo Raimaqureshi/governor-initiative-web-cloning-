@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <div className="relative">
@@ -26,7 +27,7 @@ export default function Header() {
           </div>
 
           <div className="flex-1 text-center">
-            <p className="text-center text-blue-200 font-bold mx-auto text-sm sm:text-lg lg:text-lg max-w-xs sm:max-w-md lg:max-w-lg">
+            <p className="text-center text-blue-200 font-bold mx-auto text-sm sm:text-lg lg:text-md max-w-xs sm:max-w-md lg:max-w-lg">
               <span className="md:hidden">Tuition Free Program</span>
               <span className="hidden md:inline-block">
                 Tuition Free Education Program on Latest Technologies
@@ -41,18 +42,22 @@ export default function Header() {
               <Link href="/" className="hover:text-gray-300">
                 Home
               </Link>
-              <Link href="/apply" className="hover:text-gray-300">
+              <Link href="/Apply" className="hover:text-gray-300">
                 Apply
               </Link>
-              <Link href="/jobs" className="hover:text-gray-300">
+              <Link href="/Jobs" className="hover:text-gray-300">
                 Jobs
               </Link>
-              <Link href="/results" className="hover:text-gray-300">
+              <Link href="/Results" className="hover:text-gray-300">
                 Results
               </Link>
-              <Link href="/courses" className="hover:text-gray-300">
+             
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="hover:text-gray-200"
+              >
                 Courses
-              </Link>
+              </button>
             </nav>
 
             <button
@@ -113,7 +118,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/apply"
+                href="/Apply"
                 className="hover:text-gray-300"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -122,7 +127,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/jobs"
+                href="/Jobs"
                 className="hover:text-gray-300"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -131,25 +136,72 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/results"
+                href="/Results"
                 className="hover:text-gray-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Results
               </Link>
             </li>
-            <li>
-              <Link
-                href="/courses"
-                className="hover:text-gray-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Courses
-              </Link>
-            </li>
+            <li className="relative">
+            <button
+  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+  className="hover:text-gray-200 relative"
+>
+  Courses
+</button>
+
+{/* Dropdown */}
+{isDropdownOpen && (
+  <div
+    className="absolute bg-white text-gray-800 text-sm shadow-md rounded mt-2 w-64 z-50 right-0 max-h-96 overflow-y-auto"
+  >
+    <ul className="p-2 space-y-2">
+      {/* Core Courses */}
+      <li className="font-extrabold text-xl px-2 py-1 text-black">
+        Core Courses
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Programming Fundamentals
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Web2 Using NextJS
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Earn as You Learn
+      </li>
+      <hr className="border-t-2" />
+
+      {/* Advanced Courses */}
+      <li className="font-extrabold text-xl px-2 py-1 text-black">
+        Advanced Courses
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Web 3 and Metaverse
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Cloud-Native Computing
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Artificial Intelligence (AI) and Deep Learning
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Ambient Computing and IoT
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Genomics and Bioinformatics
+      </li>
+      <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+        Network Programmability and Automation
+      </li>
+    </ul>
+  </div>
+)}
+       </li>
           </ul>
         </div>
       )}
+      
     </div>
   );
 }
