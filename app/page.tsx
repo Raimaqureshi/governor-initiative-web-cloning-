@@ -47,8 +47,16 @@ export default function HomePage() {
         The pace of technological change is accelerating, big players like Microsoft, Amazon, Google, and OpenAI are winning by providing  infrastructure, large AI foundation models, frameworks, 3D Metaverse experiences, and massive distribution networks. Solopreneurs trained in this program will win by automating work typically outsourced to employees, by directly connecting to customers by eliminating the middleman, and by developing vertical metaverses, thus paving the way for the first billion-dollar valued solopreneur businesses. This program has the objective to train this new breed of billion-dollar solopreneurs. These solopreneurs will adopt the ultra-lean business model and work independently and will not need to hire employees or other team members.
         </p>
       </div>
-<hr className='mt-8 border-gray-300' />
-      <div className="text-center mt-16 px-4 bg-white bg-white sm:bg-white md:bg-white">
+
+      {/* Adding responsive images */}
+      <div className="flex flex-wrap justify-center mt-4">
+        <Image src="/pictures/p1.jpg" alt="Image 1" width={300} height={300} className="w-full sm:w-1/3 p-2" />
+        <Image src="/pictures/p2.jpg" alt="Image 2" width={300} height={300} className="w-full sm:w-1/3 p-2" />
+        <Image src="/pictures/p3.jpg" alt="Image 3" width={300} height={300} className="w-full sm:w-1/3 p-2" />
+      </div>
+
+      <hr className='mt-8 border-gray-300' />
+      <div className="text-center mt-16 px-4 bg-white sm:bg-white md:bg-white">
         <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl sm:text-4xl max-w-4xl text-left ml-2 bg-white sm:bg-white md:bg-white">
           Core Courses Sequence
         </h1>
@@ -86,7 +94,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="text-center mt-16 px-4 bg-white bg-white sm:bg-white md:bg-white">
+      <div className="text-center mt-16 px-4 bg-white sm:bg-white md:bg-white">
         <h1 className="font-extrabold text-blue-950 text-2xl md:text-4xl sm:text-4xl text-left ml-3 bg-white sm:bg-white md:bg-white">
           Advanced Courses
         </h1>
