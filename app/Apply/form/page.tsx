@@ -4,7 +4,7 @@ export default function Form() {
       <h1 className="text-blue-900 text-3xl font-extrabold mb-4 text-center mt-8 sm:text-2xl lg:text-4xl">
         Student Course Registration Form
       </h1>
-      <p className="mt-3 text-sm">Already applied? <span className="cursor-pointer text-sky-600 underline">Get Admit Card</span></p>
+      <p className="mt-3 text-black text-sm">Already applied? <span className="cursor-pointer text-sky-600 underline">Get Admit Card</span></p>
       <form className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg sm:max-w-md space-y-4">
         <div>
           <label className="block text-gray-700 font-medium">Full Name *</label>

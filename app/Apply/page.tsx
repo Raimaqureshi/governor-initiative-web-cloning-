@@ -12,7 +12,7 @@ export default function Apply() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
-      <h1 className="text-2xl font-bold mb-6 text-center">
+      <h1 className="text-black text-2xl font-bold mb-6 text-center">
         Before continuing to the application, please subscribe on these social media platforms.
       </h1>
 
@@ -87,7 +87,7 @@ export default function Apply() {
          
         </div>
       )}
-      <p className="mt-3 text-sm">Already applied? <span className="cursor-pointer text-blue-600 underline">Get Admit Card</span></p>
+      <p className="mt-3 text-black text-sm">Already applied? <span className="cursor-pointer text-blue-600 underline">Get Admit Card</span></p>
     </div>
   );
 }
